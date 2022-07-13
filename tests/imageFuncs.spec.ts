@@ -60,7 +60,7 @@ describe('testing functions functionalities', () => {
       'the file you want delete is already deleted or you are writing wrong filename'
     );
   });
-  it('displayTheImage url testing 2', async (): Promise<void> => {
+  it('deleteImage url testing 2', async (): Promise<void> => {
     const response = await request(server).get(
       '/image/delete?filename=icelandwaterfall&width=300&height=250'
     );
@@ -71,7 +71,7 @@ describe('testing functions functionalities', () => {
     );
   });
 
-  it('displayTheImage url testing 1', async (): Promise<void> => {
+  it('displayTheImage url testing for rejecting 1', async (): Promise<void> => {
     const response = await request(server).get(
       '/image?filename=icelandwaterfall&width=300&height='
     );

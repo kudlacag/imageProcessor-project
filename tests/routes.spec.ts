@@ -9,7 +9,7 @@ import fs from 'fs';
 const server: Server = app.listen();
 
 describe('route testing', () => {
-  it('deleteImage func testing on the url', async (): Promise<void> => {
+  it('/image path testing', async (): Promise<void> => {
     const response = await request(server).get('/image');
 
     expect(response.status).toBe(400);
@@ -18,7 +18,7 @@ describe('route testing', () => {
     );
   });
 
-  it('deleteImage func testing on the url', async (): Promise<void> => {
+  it('false path testing', async (): Promise<void> => {
     const response = await request(server).get('/imagessss');
 
     expect(response.status).toBe(404);
